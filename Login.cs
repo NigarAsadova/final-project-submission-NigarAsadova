@@ -47,10 +47,10 @@ namespace Movies_Project
                 try
                 {
                     conn.Open();
-                    string checkQuery = "Select COUNT(*) From Users WHERE username = @username AND code = @code";
+                    string checkQuery = "Select COUNT(*) From Users WHERE username = @username AND code = @Password";
                     SqlCommand cm = new SqlCommand(checkQuery, conn);
                     cm.Parameters.AddWithValue("@username", usernameBox.Text);
-                    cm.Parameters.AddWithValue("@code", codeBox.Text) ;
+                    cm.Parameters.AddWithValue("@Password", codeBox.Text) ;
 
                     int count = (int) cm.ExecuteScalar();
                     if (count > 0) showMovie();
@@ -104,7 +104,6 @@ namespace Movies_Project
         private void submitBtn_Click(object sender, EventArgs e)
         {
             checkUsers();
-            showMovie();
         }
 
         private void signUpLabel_Click(object sender, EventArgs e)
