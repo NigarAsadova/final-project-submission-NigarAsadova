@@ -25,13 +25,13 @@ namespace Movies_Project
             {
                 try
                 {
-                conn.Open();
-                string query = "Select * from UserData";
-                SqlDataAdapter data = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                data.Fill(dt);
+                    conn.Open();
+                    string query = "Select * from Users";
+                    SqlDataAdapter data = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    data.Fill(dt);
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     error_msgBox.Text = e.Message;
                 }
@@ -47,9 +47,9 @@ namespace Movies_Project
                 try
                 {
                     conn.Open();
-                    string checkQuery = "Select COUNT(*) From Users WHERE username = @username AND code = @Password";
+                    string checkQuery = "Select COUNT(*) From Users WHERE Username = @Username AND Password = @Password";
                     SqlCommand cm = new SqlCommand(checkQuery, conn);
-                    cm.Parameters.AddWithValue("@username", usernameBox.Text);
+                    cm.Parameters.AddWithValue("@Username", usernameBox.Text);
                     cm.Parameters.AddWithValue("@Password", codeBox.Text) ;
 
                     int count = (int) cm.ExecuteScalar();

@@ -50,15 +50,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actors.cs" />
+    <Compile Include="Actors.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Actors.Designer.cs">
       <DependentUpon>Actors.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddMovies.cs" />
+    <Compile Include="AddMovies.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddMovies.Designer.cs">
       <DependentUpon>AddMovies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Directors.cs" />
+    <Compile Include="Directors.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Directors.Designer.cs">
       <DependentUpon>Directors.cs</DependentUpon>
     </Compile>
@@ -68,7 +74,9 @@
     <Compile Include="FavoriteActors.Designer.cs">
       <DependentUpon>FavoriteActors.cs</DependentUpon>
     </Compile>
-    <Compile Include="FavoriteMovies.cs" />
+    <Compile Include="FavoriteMovies.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FavoriteMovies.Designer.cs">
       <DependentUpon>FavoriteMovies.cs</DependentUpon>
     </Compile>
@@ -104,11 +112,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchMovie.cs" />
+    <Compile Include="SearchMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SearchMovie.Designer.cs">
       <DependentUpon>SearchMovie.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignUp.cs" />
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
